@@ -5,3 +5,7 @@ pyTelegramBotAPI==4.26.0
 requests==2.32.3
 telebot==0.0.5
 urllib3==2.3.0
+loader~=2017.9.11
+peewee~=3.17.9
+dotenv~=0.9.9
+python-dotenv~=1.0.1

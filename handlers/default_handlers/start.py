@@ -4,7 +4,7 @@ from keyboards.inline.start_buttons import get_start_buttons
 
 @bot.message_handler(commands=["start"])
 def bot_start(message: Message):
-    photo_path = "media/start_photo.jpg"
+    photo_path = "media/start_photo.jgp.png"
     welcome_text = (
         f"Привет, {message.from_user.full_name} 👋\n\n"
         "Я бот для поиска и сдачи квартир 🏠\n\n"
