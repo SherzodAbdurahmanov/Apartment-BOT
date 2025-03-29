@@ -6,6 +6,7 @@ DB_PATH = os.path.join(os.path.dirname(__file__), "apartments.db")
 
 db = SqliteDatabase(DB_PATH)
 
+
 class Apartment(Model):
     owner_id = IntegerField()
     photo = CharField()
@@ -18,7 +19,7 @@ class Apartment(Model):
     class Meta:
         database = db
 
-print("Файл базы данных:", DB_PATH)
+
 db.connect()
 db.create_tables([Apartment])
 db.close()

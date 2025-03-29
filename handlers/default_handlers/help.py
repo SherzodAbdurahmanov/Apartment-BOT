@@ -1,10 +1,15 @@
 from telebot.types import Message
-
-from config_data.config import DEFAULT_COMMANDS
 from loader import bot
-
 
 @bot.message_handler(commands=["help"])
 def bot_help(message: Message):
-    text = [f"/{command} - {desk}" for command, desk in DEFAULT_COMMANDS]
-    bot.reply_to(message, "\n".join(text))
+    text = (
+        "🤖 *Команды бота:*\n\n"
+        "🏠 /start - Начать работу с ботом\n"
+        "📋 /help - Справка по командам\n"
+        "🏡 Сдать квартиру - Добавить новое объявление\n"
+        "🔍 Снять квартиру - Найти доступные квартиры\n"
+        "📜 Мои объявления - Посмотреть или удалить свои объявления\n"
+        "❌ Отмена - Прервать процесс добавления квартиры"
+    )
+    bot.reply_to(message, text, parse_mode="Markdown")

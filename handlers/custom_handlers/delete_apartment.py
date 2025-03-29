@@ -7,7 +7,6 @@ from loader import bot
 def delete_apartment(call: CallbackQuery):
     apartment_id = int(call.data.split("_")[1])
 
-    # Удаляем запись из базы данных
     apartment = Apartment.get_or_none(Apartment.id == apartment_id)
     if apartment:
         apartment.delete_instance()
